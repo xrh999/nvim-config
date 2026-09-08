@@ -5,3 +5,6 @@ end)
 
 -- window switching keybing
 vim.keymap.set("n", "<leader>w", "<C-w>")
+
+-- hide the highlights after pressing esc after searching
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
