@@ -13,18 +13,13 @@ vim.pack.add ({
     { src = "https://github.com/lewis6991/gitsigns.nvim"},
     { src = "https://github.com/windwp/nvim-autopairs"},
     { src = "https://github.com/windwp/nvim-ts-autotag" },
-    { src = "https://github.com/saghen/blink.lib"}, 
+    { src = "https://github.com/saghen/blink.lib"},
     { src = "https://github.com/Saghen/blink.cmp", version = vim.version.range("1.*")},
+    { src = "https://github.com/nvim-lualine/lualine.nvim" },
 })
 
 -- set up the theme
 vim.cmd("colorscheme everforest")
-
-
--- Yazi.nvim set up
-require("yazi").setup({
-  open_for_directories = true, -- this is the key option
-})
 
 -- Which-key set up
 require("which-key").setup({
@@ -45,3 +40,9 @@ require("plugins.autopair")
 require("plugins.blink")
 require("plugins.lsp")
 require("plugins.auto-tag")
+require("plugins.lualine")
+
+-- Yazi.nvim set up
+require("yazi").setup({
+  open_for_directories = true, -- this is the key option
+})
