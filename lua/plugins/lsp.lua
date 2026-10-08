@@ -51,6 +51,13 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
+vim.lsp.config("clangd", {
+	cmd = {
+		"clangd",
+		"--query-driver=/opt/homebrew/bin/g++-16",
+	},
+})
+
 for _, lang in ipairs(servers) do
     vim.lsp.enable(lang)
 end
